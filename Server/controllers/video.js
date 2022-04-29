@@ -1,9 +1,7 @@
-import express from 'express';
 import mongoose from 'mongoose';
 
 import Videos from "../Models/videoRequestsModel.js";
 
-const router = express.Router();
 
 export const getVideo = async (req, res) => {
     const { id } = req.params;
@@ -63,4 +61,3 @@ export const deleteVideo = async (req, res) => {
     res.json({ message: "video deleted successfully." });
 }
 
-export default router;
