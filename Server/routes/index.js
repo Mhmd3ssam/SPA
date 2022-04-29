@@ -1,9 +1,7 @@
 import express from 'express';
-
+import {getTweets} from '../controllers/index.js'
 const router = express.Router();
 
-router.get('/',(req,res)=>{
-    res.send("SPA App says hello world!");
-});
+router.get('/',getTweets);
 
 export default router;
