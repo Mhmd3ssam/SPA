@@ -1,5 +1,4 @@
 import tweets from "../Models/index.js";
-
 export const getTweets = async (req, res) => {
     try {
         const tweet = await tweets.find();
