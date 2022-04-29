@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import initRoutes from "./routes/index.js";
+import initRoutes from "./Routes/index.js";
 
 const app = express();
 app.use('/',initRoutes);

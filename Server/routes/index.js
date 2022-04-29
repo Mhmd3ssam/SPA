@@ -1,7 +1,8 @@
 import express from 'express';
-import {getTweets} from '../controllers/index.js'
+import {getTweets, createTweet} from '../Controllers/index.js'
 const router = express.Router();
 
 router.get('/',getTweets);
+router.post('/',createTweet);
 
 export default router;
