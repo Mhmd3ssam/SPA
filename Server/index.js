@@ -3,10 +3,16 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import initRoutes from "./Routes/index.js";
+import userRoutes from "./Routes/userRoute.js"
+import videoRoutes from "./Routes/videoRoute.js"
 
 const app = express();
-app.use('/',initRoutes);
+
+app.use('/user',userRoutes);
+app.use('/video',videoRoutes);
+app.use('/',(req,res)=>{
+    res.send("Hello World");
+});
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
